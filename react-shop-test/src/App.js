@@ -1,11 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import OrderPage from "./pages/OrderPage/OrderPage";
-
+import { OrderContextProvider } from "./contexts/OrderContext";
 function App() {
   return (
     <div style={{ padding: "4rem" }}>
-      <OrderPage />
+      <OrderContextProvider>
+        <OrderPage />
+      </OrderContextProvider>
     </div>
   );
 }
